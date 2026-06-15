@@ -56,11 +56,14 @@ if not alerta:
 
 #EJERCICIO 3
 
+monto_total = int(input("Ingrese el monto total de la compra: "))
+tarjeta_socio = input("Tiene tarjeta de socio? responda si/no ")
 edad = int(input("ingrese su edad: "))
-tarjeta_socio = input("Tiene tarjeta de socio? responda s?/no ")
-monto_total = float(input("Ingrese el monto total de la compra: "))
 descuento = 0.85
-if edad > 60 and (tarjeta_socio == "s?" or monto_total >= 10000):
+
+if (edad > 60 or tarjeta_socio == "si") and monto_total >= 10000:
     print("El cliente cumple las condiciones para el descuento, el monto total con descuento es: ", monto_total * descuento)
+
 else:
     print("el cliente no cumple las condiciones para el descuento")
+
