@@ -30,25 +30,21 @@ if not advertencia:
 matriz_ventas = [
     [23000,26000,50000],
     [36000,28000,15000],
-    [58000,49000,26000]
+    [5000,4000,2000],
 ]
 
 totales_vendedores = [sum(vendedor) for vendedor in matriz_ventas]
 for i, total in enumerate(totales_vendedores, 1):
     print(f"Vendedor {i}: ${total:,}")
 
-print("-" * 40)
-
 max_ventas = max(totales_vendedores)
 mejor_vendedor_indice = totales_vendedores.index(max_ventas) +1
 print("el vendedor con mayor rendimiento es: ", mejor_vendedor_indice , "con un total de $", max_ventas)
 
-print("-" * 40)
-
 alerta = False
 for i, total in enumerate(totales_vendedores, 1):
     if total < 30000:
-        print("el vendedor ", i , "tuvo bajo desempeño, total: $", total , "meta:30000")
+        print("el vendedor ", i , "tuvo bajo desempeño, total: $",total)
         alerta = True
 
 if not alerta: 
